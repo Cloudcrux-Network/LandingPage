@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function POST(req, res) {
+async function autoDiscover(req, res) {
   const rawXML = await req.text();
   const regex = /<EMailAddress>([^<]+)<\/EMailAddress>/;
   const match = rawXML.match(regex);
@@ -43,3 +43,4 @@ export async function POST(req, res) {
     }
   );
 }
+export { autoDiscover as POST, autoDiscover as GET };
