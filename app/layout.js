@@ -17,7 +17,7 @@ export const metadata = {
     url: "https://cloudcrux.com/",
     type: "website",
     description: description,
-    image: "https://cloudcrux.com/img/fbpreview.jpg",
+    image: "https://cloudcrux.com/fbpreview.jpg",
   },
 };
 
