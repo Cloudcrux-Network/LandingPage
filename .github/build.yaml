@@ -1,0 +1,42 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    name: Build and Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 20.5
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.5
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+
+      - name: Copy directories
+        run: |
+          mkdir -p .next/standalone/public
+          mkdir -p .next/standalone/.next/static
+          cp -r public/* .next/standalone/public/
+          cp -r .next/static/* .next/standalone/.next/static/
+
+      - name: Zip standalone directory
+        run: |
+          cd .next
+          zip -r build.zip standalone
+
+      - name: Upload zipped build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: .next/build.zip
