@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 const description =
   "CloudCrux offers many of the services your company may need. Web Hosting, Email, Custom Cloud Solutions and more. Starting at prices of as low as $3.";
 export const metadata = {
+  metadataBase: new URL("https://cloudcrux.com/"),
   author: "Michael Nichols",
   keybord:
     "Cloud,Crux,Network,CloudCrux,Programming,Hosting,CloudCrux Network,cloud service,cloud services,cloud solutions,hosting services,web host, web hosting",
@@ -23,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );

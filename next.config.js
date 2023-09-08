@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   output: "standalone",
   async rewrites() {
     return [
@@ -14,6 +15,14 @@ const nextConfig = {
     ];
   },
   experimental: { serverActions: true },
+  webpack: (
+    config,
+    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+  ) => {
+    if (!isServer) return config;
+    //console.log(config);
+    return config;
+  },
 };
 
 module.exports = nextConfig;

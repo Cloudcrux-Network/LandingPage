@@ -16,7 +16,7 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: install # will run `yarn install` command
+          cmd: install
 
       - name: Build production bundle
         uses: borales/actions-yarn@v4
@@ -30,13 +30,8 @@ jobs:
           cp -r public/* .next/standalone/public/
           cp -r .next/static/* .next/standalone/.next/static/
 
-      - name: Zip standalone directory
-        run: |
-          cd .next
-          zip -r build.zip standalone
-
       - name: Upload zipped build
         uses: actions/upload-artifact@v2
         with:
           name: build-artifact
-          path: .next/build.zip
+          path: .next/standalone

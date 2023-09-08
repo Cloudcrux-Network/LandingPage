@@ -25,29 +25,22 @@ const AboutUs = () => {
         id="aboutUs"
         className="bg-gray-900 w-full max-w-3xl shadow-2xl p-6 rounded-lg space-y-16"
       >
-        {/* WHAT WE DO Section */}
         <div>
           <h2 className="text-xl sm:text-2xl font-bold mb-4 tracking-wide">
             What We Do
-          </h2>{" "}
-          {/* Added letter-spacing */}
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Increased gap for better spacing */}
-            {/* Iterate over services for cleaner code and more maintainable in the future */}
             {services.map((content, index) => (
               <div
                 key={index}
                 className="border rounded p-4 hover:shadow-lg transition-shadow duration-300"
               >
-                {" "}
-                {/* Add hover effect for depth */}
                 <h3 className="font-semibold mb-2">{content[0]}</h3>
                 <p>{content[1]}</p>
               </div>
             ))}
           </div>
         </div>
-        {/* ABOUT Section */}
         <div className="mt-16">
           <h2 className="text-2xl font-bold mb-4">What Are We About?</h2>
           <p>
@@ -59,7 +52,6 @@ const AboutUs = () => {
             but to contribute to our Client's Success.`}
           </p>
         </div>
-        {/* PROMISE Section */}
         <div>
           <h2 className="text-2xl font-bold mb-4 tracking-wide">
             Our Promise To You
@@ -70,7 +62,6 @@ const AboutUs = () => {
             <li>No big words. No Confusion.</li>
           </ul>
         </div>
-        {/* CONTACT Section */}
         <div>
           <h2 className="text-2xl font-bold mb-4 tracking-wide">Contact Us</h2>
           <p className="text-gray-300 leading-relaxed">
@@ -82,14 +73,12 @@ const AboutUs = () => {
           </p>{" "}
           <div className="mt-4 flex items-center">
             <Email className="mr-2" />
-            {/* Email Icon */}
             <a
               href="mailto:support@cloudcrux.com"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               support@cloudcrux.com
             </a>
-            {/* Email link with hover effect */}
           </div>
           <div className="mt-4">
             <ContactForm />

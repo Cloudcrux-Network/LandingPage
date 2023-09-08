@@ -5,7 +5,7 @@ import Footer from "/components/footer";
 import AboutUs from "/components/aboutus";
 const Home = () => {
   return (
-    <div className="bg-cover bg-fixed bg-[url('/background.png')] flex flex-col min-h-screen ">
+    <div className="bg-cover bg-top bg-fixed bg-[url('/background.png')] flex flex-col min-h-screen ">
       <Landing />
       <AboutUs />
       <Footer />

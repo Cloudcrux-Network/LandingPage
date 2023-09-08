@@ -9,17 +9,17 @@ const Landing = () => {
     <div className="backdrop-brightness-[0.65] backdrop-blur-sm flex flex-col items-center justify-center p-6 h-screen py-6 sm:py-12">
       <div className="text-center">
         <h1
-          className={`${Resize} text-2xl sm:text-4xl font-bold mb-4 text-white text-shadow-lg`}
+          className={`${Resize} text-4xl sm:text-6xl font-bold mb-4 text-white text-shadow-lg`}
         >
           Cloud Crux Network
         </h1>
-        <p className="text-lg mb-8 text-white text-shadow-md">
+        <p className="text-xl mb-8 text-white text-shadow-md">
           The Sky is Infinite
         </p>
         <div className="flex justify-center items-center mb-8 ">
           <Image
             draggable="false"
-            className={`${ResizeButton} active:rotate-180`}
+            className={`${ResizeButton} w-3/4 sm:w-1/2 active:rotate-180`}
             src="/CCLogonewWhite.png"
             alt="Cloud Crux Network logo - Home"
             width={200}
