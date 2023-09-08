@@ -75,7 +75,16 @@ const ContactForm = () => {
       </div>
       <div>
         <SubmitButton />
-        {message && <span className="ml-4 text-red-500">{message}</span>}
+
+        {message && (
+          <span
+            className={`ml-4  ${
+              message === "Success!" ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            {message}
+          </span>
+        )}
       </div>
     </form>
   );
