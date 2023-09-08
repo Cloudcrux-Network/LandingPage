@@ -30,6 +30,7 @@ export async function submitContactForm(formData) {
     revalidatePath("/");
     return { message: "Success!" };
   } catch (error) {
+    console.error(error);
     return { message: "There was an error please try again later. Sorry!" };
   }
 }
