@@ -6,13 +6,25 @@ const description =
   "CloudCrux offers many of the services your company may need. Web Hosting, Email, Custom Cloud Solutions and more. Starting at prices of as low as $3.";
 const url = new URL("https://cloudcrux.com/");
 const title = "CloudCrux Network";
-const image = new URL("https://cloudcrux.com/fbpreview.png");
+const images = "/fbpreview.png";
 export const metadata = {
   metadataBase: url,
-  author: "Michael Nichols",
-  keyword:
-    "Cloud,Crux,Network,CloudCrux,Programming,Hosting,CloudCrux Network,cloud service,cloud services,cloud solutions,hosting services,web host, web hosting",
-
+  authors: [{ name: "Michael Nichols", url: "https://michael-nichols.com" }],
+  keywords: [
+    "Cloud",
+    "Crux",
+    "Network",
+    "CloudCrux",
+    "Programming",
+    "Hosting",
+    "CloudCrux Network",
+    "cloud service",
+    "cloud services",
+    "cloud solutions",
+    "hosting services",
+    "web host",
+    "web hosting",
+  ],
   title,
   description,
   twitter: {
@@ -20,14 +32,16 @@ export const metadata = {
     url,
     title,
     description,
-    image,
+    images,
   },
   openGraph: {
+    locale: "en_US",
+    siteName: title,
     title,
     url,
     type: "website",
     description,
-    image,
+    images,
   },
 };
 
