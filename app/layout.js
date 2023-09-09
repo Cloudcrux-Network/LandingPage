@@ -7,7 +7,7 @@ const description =
 export const metadata = {
   metadataBase: new URL("https://cloudcrux.com/"),
   author: "Michael Nichols",
-  keybord:
+  keyword:
     "Cloud,Crux,Network,CloudCrux,Programming,Hosting,CloudCrux Network,cloud service,cloud services,cloud solutions,hosting services,web host, web hosting",
 
   title: "CloudCrux Network",
@@ -18,7 +18,7 @@ export const metadata = {
     url: "https://cloudcrux.com/",
     type: "website",
     description: description,
-    image: "https://cloudcrux.com/fbpreview.jpg",
+    image: "https://cloudcrux.com/fbpreview.png",
   },
 };
 

@@ -16,7 +16,7 @@ const AboutUs = () => {
     ],
     [
       "Cloud Services",
-      "Allow your business to have an online storage through a custom dashboard!",
+      "Allow your business to have an online services through a custom dashboard!",
     ],
   ];
   return (
