@@ -6,7 +6,7 @@ const description =
   "CloudCrux offers many of the services your company may need. Web Hosting, Email, Custom Cloud Solutions and more. Starting at prices of as low as $3.";
 const url = new URL("https://cloudcrux.com/");
 const title = "CloudCrux Network";
-const image = "https://cloudcrux.com/fbpreview.png";
+const image = new URL("https://cloudcrux.com/fbpreview.png");
 export const metadata = {
   metadataBase: url,
   author: "Michael Nichols",
